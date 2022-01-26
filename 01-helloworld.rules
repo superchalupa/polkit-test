@@ -1,0 +1,8 @@
+polkit.addRule(function(action, subject) {
+	if (action.id == "com.example.HelloWorld.auth") {
+		if (action.lookup("theirname") == "BOB") {
+       			return polkit.Result.YES;
+		}
+       		return polkit.Result.NO;
+	}
+});

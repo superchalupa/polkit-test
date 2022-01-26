@@ -1,7 +1,7 @@
 #!/usr/bin/python
 
-from pydbus import SessionBus
-bus = SessionBus()
+from pydbus import SystemBus
+bus = SystemBus()
 
 # Create an object that will proxy for a particular remote object.
 remote_object = bus.get(
@@ -10,3 +10,4 @@ remote_object = bus.get(
 )
 
 print(remote_object.SayHello("BOB"))
+print(remote_object.SayHello("CHARLES"))
